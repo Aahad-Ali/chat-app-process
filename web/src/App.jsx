@@ -6,6 +6,7 @@ import { Routes, Route, Link, Navigate } from "react-router-dom";
 import loaderImg from './img/loader.webp'
 
 import UserList from "./components/userList";
+import ChatScreen from "./components/chatScreen";
 import Profile from "./components/profile";
 import Login from "./components/login";
 import Signup from "./components/signup";
@@ -135,6 +136,7 @@ function App() {
           <Route path="/" element={<UserList />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/change-password" element={<ChangePassword />} />
+          <Route path="/chat/:id" element={<ChatScreen />} />
           <Route path="*" element={<Navigate to="/" replace={true} />} />
         </Routes>
         : null}

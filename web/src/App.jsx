@@ -5,8 +5,8 @@ import axios from 'axios'
 import { Routes, Route, Link, Navigate } from "react-router-dom";
 import loaderImg from './img/loader.webp'
 
-import UserList from "./components/userList";
 import ChatScreen from "./components/chatScreen";
+import UserList from "./components/userList";
 import Profile from "./components/profile";
 import Login from "./components/login";
 import Signup from "./components/signup";
@@ -18,6 +18,7 @@ function App() {
   let { state, dispatch } = useContext(GlobalContext);
 
   console.log("state: ", state);
+  const [fullName, setFullName] = useState("");
 
 
   const logoutHandler = async () => {
@@ -94,7 +95,7 @@ function App() {
     }, function (error) {
       // Any status codes that falls outside the range of 2xx cause this function to trigger
       // Do something with response error
-      if (error.response.status === 401) {
+      if (error?.response?.status === 401) {
         dispatch({
           type: 'USER_LOGOUT'
         })

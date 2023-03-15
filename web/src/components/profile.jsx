@@ -132,8 +132,8 @@ function Home() {
             </div>
             <div className='profile' >
                 <img src={profilePhoto} alt="" />
-                <span>{state?.user?.firstName} {state?.user?.lastName}  <br /> {state?.user?.email} </span>
-                
+                <span>{state?.user?.firstName} <br /> {state?.user?.email} </span>
+                {/* {state?.user?.lastName} */}
                 <button>
                     <Link to={`/change-password`}>Change password</Link>
                 </button>

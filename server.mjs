@@ -15,7 +15,7 @@ import { createServer } from "http";
 import cookie from 'cookie';
 
 
-
+    // "socket.io-client": "^4.6.0", //"socket.io": "^4.6.0",
 
 const SECRET = process.env.SECRET || "topsecret";
 

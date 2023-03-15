@@ -7,6 +7,8 @@ import moment from 'moment';
 import InfiniteScroll from 'react-infinite-scroller';
 import { useParams } from "react-router-dom";
 import { io } from "socket.io-client";
+// import './App.css';
+
 
 
 
@@ -106,11 +108,11 @@ function ChatScreen() {
 
 
     return (
-        <div>
+        <div className='chatScreen-main'>
             <h1>Chat with '{recipientProfile?.firstName}' </h1>
-            <span>{recipientProfile?.email}</span>
+            <span>'{recipientProfile?.email} '</span>
 
-            <form onSubmit={sendMessage}>
+            <form onSubmit={sendMessage} className="chat-person">
                 <input type="text" placeholder='type your message' onChange={(e) => [
                     setWriteMessage(e.target.value)
                 ]} />
@@ -124,14 +126,16 @@ function ChatScreen() {
                         const className = (eachMessage.from._id === id) ? "recipientMessage" : "myMessage"
 
                         return <div
+                        id='msg'
                             key={index}
                             className={`message ${className}`}>
+                            <div className='text' >{eachMessage.text}</div><br />
                             <div className='head'>
-                                <div className='name' >{eachMessage.from.firstName} {eachMessage.from.lastName}</div>
                                 <div className='time' >{moment(eachMessage.createdOn).fromNow()}</div>
+                                {/* <div className='name' >{eachMessage.from.firstName} </div> */}
                             </div>
-                            <div className='text' >{eachMessage.text}</div>
                         </div>
+                        // {eachMessage.from.lastName}
 
                     })
                     : null

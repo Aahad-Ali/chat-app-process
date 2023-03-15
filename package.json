@@ -21,6 +21,7 @@
     "mongoose": "^6.8.0",
     "multer": "*",
     "nanoid": "^4.0.0",
+    "nodemon": "^2.0.21",
     "postmark": "^3.0.15",
     "socket.io": "^4.6.0",
     "socket.io-client": "^4.6.0",

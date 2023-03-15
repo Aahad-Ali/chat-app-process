@@ -4,20 +4,65 @@
   flex-wrap: wrap;
 }
 
-.navBar>ul {
+.navBar > ul {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
 }
 
-.navBar>ul>li {
+.navBar > ul > li {
   margin: 10px;
   border-radius: 5px;
   border: 1px solid black;
 }
 
-.navBar>ul>li>a {
+.navBar > ul > li > a {
   text-decoration: none;
   padding: 10px 20px;
   display: inline-block;
+}
+#msg {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px;
+  /* border: 1px solid greenyellow; */
+  background-color: rgb(29, 191, 255);
+  color: #fff;
+  border-radius: 30px;
+  width: 20%;
+}
+.chat-person {
+  padding: 20px;
+}
+.chat-person input {
+  font-size: 15px;
+  padding: 5px;
+}
+.chat-person button {
+  font-size: 15px;
+  padding: 5px;
+}
+.chatScreen-main {
+  display: flex;
+  flex-direction: column;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.chatScreen-main h1 {
+  padding: 20px 20px 0px 20px;
+}
+.chatScreen-main span {
+  padding: 0px 20px 30px 20px;
+  color: rgb(31, 165, 255);
+}
+#msg .head .name {
+  font-size: 10px;
+}
+#msg .head .time {
+  font-size: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+#msg .text {
+  font-size: 25px;
 }

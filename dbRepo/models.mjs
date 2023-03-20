@@ -58,11 +58,12 @@ const otpSchema = new mongoose.Schema({
 });
 export const otpModel = mongoose.model('Opts', otpSchema);
 
-
-const mongodbURI = process.env.mongodbURI || "mongodb+srv://dbuser:dbpassword@cluster0.gq9n2zr.mongodb.net/abcdatabase?retryWrites=true&w=majority";
+// mongodb+srv://dbuser:dbpassword@cluster0.gq9n2zr.mongodb.net/abcdatabase?retryWrites=true&w=majority
+const mongodbURI = process.env.mongodbURI || "mongodb+srv://chatappsockitio:chatappsockitio123@cluster0.0t9dcns.mongodb.net/chatappwithsockitio?retryWrites=true&w=majority";
 /////////////////////////////////////////////////////////////////////////////////////////////////
 mongoose.set('strictQuery', false);
 mongoose.connect(mongodbURI);
+// mongodb+srv://<username>:<password>@cluster0.0t9dcns.mongodb.net/?retryWrites=true&w=majority
 
 ////////////////mongodb connected disconnected events///////////////////////////////////////////////
 mongoose.connection.on('connected', function () {//connected

@@ -41,7 +41,7 @@ function ChatScreen() {
                     withCredentials: true
                 });
 
-            console.log("RecipientProfile: ", response);
+            console.log("RecipientProfile:", response);
             setRecipientProfile(response.data)
         } catch (error) {
             console.log("axios error: ", error);

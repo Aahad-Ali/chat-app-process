@@ -222,10 +222,10 @@ app.post('/api/v1/message', async (req, res) => {
         .exec();
 
 
-    io.emit(`${req.body.to}-${req.body.token._id}`, populatedMessage)
-    io.emit(`personal-channel-${req.body.to}`, populatedMessage)
+    io.emit(`${req.body.to}-${req.body.token._id}`, poplatedMessage)
+    io.emit(`personal-channel-${req.body.to}`, poplatedMessage)
 
-    console.log("populatedMessage: ", populatedMessage)
+    console.log("populatedMessage: ", poplatedMessage)
  
     res.send("message sent successfully");
 })
@@ -268,7 +268,7 @@ const server = createServer(app);
 // handing over server access to socket.io
 const io = new socketIo(server, {
     cors: {
-        origin: ["http://localhost:3000", 'https://mern-chat-app-inzamam.up.railway.app'],
+        origin: ["http://localhost:3000", '*'],
         credentials: true
     }
 });

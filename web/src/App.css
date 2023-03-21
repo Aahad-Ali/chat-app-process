@@ -1,3 +1,12 @@
+.messageView{
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  background-color: black;
+  border-radius: 20px;
+  margin: 20px;
+  /* align-self: center; */
+}
 .navBar {
   display: flex;
   justify-content: space-around;
@@ -21,7 +30,7 @@
   padding: 10px 20px;
   display: inline-block;
 }
-#msg {
+.message {
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -30,7 +39,8 @@
   background-color: rgb(29, 191, 255);
   color: #fff;
   border-radius: 30px;
-  width: 20%;
+  max-width: 20rem;
+  min-width: 12rem;
 }
 .chat-person {
   padding: 20px;
@@ -55,14 +65,28 @@
   padding: 0px 20px 30px 20px;
   color: rgb(31, 165, 255);
 }
-#msg .head .name {
+/* .head{
+  display: flex;
+  justify-content: space-between;
+} */
+.name {
   font-size: 10px;
+  font-weight: bold;
 }
-#msg .head .time {
+.message .head .time {
   font-size: 10px;
   display: flex;
   justify-content: flex-end;
 }
-#msg .text {
-  font-size: 25px;
+.message .head .text {
+  font-size: 15px;
+}
+
+.myMessage{
+  align-self: flex-end;
+
+}
+.recipientMessage{
+  background-color:#fff;
+  color: black;
 }
